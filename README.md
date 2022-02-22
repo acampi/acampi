@@ -1,4 +1,7 @@
+<h2 align="center">I'm currently updating this site, but in the meantime a quick snapshop about me</h1>
+
 <h1 align="center">Hi 👋, I'm Albert</h1>
+
 <h3 align="center">A business analytics professional & full stack R developer, former Big-4 consultant and in-house financial analyst with over 10 years’ experience, passionate about fostering the data analytics practice across organizations & teams to drive business insights. Holder of a bachelor degree in Economics, an MSc in Data Analytics and several technical diplomas. Spanish citizenship, fluent in 4 languages.</h3>
 
 - 🌱 I’m currently learning **Python, Javascript, D3 & React**
