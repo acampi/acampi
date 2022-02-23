@@ -25,11 +25,16 @@
 <p align="left"> <a href="https://www.rstudio.com/" target="_blank" rel="noreferrer"> <img src="https://github.com/devicons/devicon/blob/master/icons/r/r-original.svg" alt="rstudio" width="35" height="35"/> </a> <a href="https://www.rstudio.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rstudio/rstudio-original.svg" alt="rstudio" width="35" height="35"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="35" height="35"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="35" height="35"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="35" height="35"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="35" height="35"/> </a> <a href="https://d3js.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" alt="d3js" width="35" height="35"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="35" height="35"/> </a> <a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="35" height="35"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="35" height="35"/> </a>  <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="35" height="35"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="35" height="35"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="35" height="35"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="35" height="35"/> </a>  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="35" height="35"/> </a> </p>
 
 <h2 align="left">My learning journey in Analytics</h2>
+<a href="https://www.rstudio.com/" target="_blank" rel="noreferrer"> <img src="https://github.com/acampi/acampi/blob/main/learning_path.png" alt="rstudio"/> </a>
 
 <details><summary> 1. The <strong>Master of Science in Business Analytics</u></strong> program:</summary><blockquote>
+  <p> ⚠️Section under construction⚠️</p> 
+<p> In the meantime, you can find more about <strong>NYU MSBA program</strong><a href="https://www.stern.nyu.edu/programs-admissions/ms-business-analytics/academics"> here </a></p>
   </blockquote></details>
   
 <details><summary> 2.The <strong>Full Stack Web Development</u></strong> bootcamp:</summary><blockquote>
+  <p> ⚠️Section under construction⚠️ </p>
+  <p> In the meantime, you can find more about <strong>Le Wagon program</strong><a href="https://www.lewagon.com/web-development-course/full-time"> here </a></p>
   </blockquote></details>
 
 <details open><summary> 3. The <strong><u>Full Stack R Developer</u></strong> 5 course-track:</summary><blockquote>
@@ -98,4 +103,5 @@
 </blockquote></details>
 <a href="https://www.rstudio.com/" target="_blank" rel="noreferrer"> <img src="https://github.com/acampi/acampi/blob/main/course_track.png" alt="rstudio"/> </a>
 </blockquote></details>
-  
+
+
