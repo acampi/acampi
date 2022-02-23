@@ -1,4 +1,4 @@
-<h2 align="center">I'm currently updating this site, but in the meantime a quick snapshop about me...</h1>
+<h5 align="center"><em>I'm currently updating this site, but in the meantime a quick snapshop about me...</em></h5>
 
 <h1 align="center">Hi 👋, I'm Albert</h1>
 
