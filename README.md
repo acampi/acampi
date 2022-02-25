@@ -4,8 +4,6 @@
 
 <h3 align="center">A business analytics professional & full stack R developer, former Big-4 consultant and in-house financial analyst with over 10 years’ experience, passionate about fostering the data analytics practice across organizations & teams to drive business insights. Holder of a bachelor degree in Economics, an MSc in Data Analytics and several technical diplomas. Spanish citizenship, fluent in 4 languages.</h3>
 
-- 🌱 I’m currently learning **Javascript & D3**
-
 - 👨‍💻 Links to all of my projects are available
 
    * **[Shiny Apps](https://github.com/acampi)**
@@ -17,6 +15,8 @@
 - 📫 How to reach me **albertcampillo@gmail.com**
 
 - 📄 Know about my professional background [Work Experience](https://github.com/acampi)
+
+- 🌱 I’m currently *learning* **Javascript & *D3** and *working* on a **Real Estate Price Prediction** app  
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
