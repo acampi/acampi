@@ -59,6 +59,7 @@
     <li><strong>Modeling</strong> & <strong>Machine Learning</strong>: parnsip (xgboost, glmnet, kernlab, broom, & more)</li>
     <li><strong>Business Reporting</strong>: communicate results with rmarkdown</li>
   </ul>
+  <a href="" target="_blank" rel="noreferrer"> <img src="https://github.com/acampi/acampi/blob/main/certif_ds4b_101R.png" alt="ds4b_101R" width="400" height="300"/></a>
 </blockquote></details>
 
 <details><summary> ✅ <strong>2. Data Science for Business with R</strong> 🤖🔮</summary><blockquote>
@@ -74,9 +75,10 @@
     <li><strong>Expected Value</strong>, <strong>Threshold Optimization</strong>, & <strong>Sensitivity Analysis</strong>: Link the model to financial performance through the Expected Value framework</li>
     <li><strong>Recommendation Algorithm Development</strong>: Use a 3-step process to develop a recommendation algorithm capable of assisting managers in retaining employees</li>
   </ul>
+  <a href="" target="_blank" rel="noreferrer"> <img src="https://github.com/acampi/acampi/blob/main/certif_ds4b_201R.png " alt="ds4b_201R" width="400" height="300"/></a>
 </blockquote></details>
 
-<details><summary> ✅ <strong>3. High Performance Time Series Forecasting</strong> 🕓📈📉 </summary><blockquote>
+<details><summary> ⚙️ <strong>3. High Performance Time Series Forecasting</strong> 🕓📈📉 </summary><blockquote>
 <br>
 <p>Apply the latest forecasting techniques to real business problems by learning from the strategies 
   that won 4 key time-series Kaggle competitions</p>
@@ -97,6 +99,7 @@
     <li><strong>Flexdashboard</strong>: A dashboarding framework that is built on top of RMarkdown.</li>
     <li><strong>Machine learning models</strong> used to predict product prices: parsnip and XGBoost</li>
   </ul>
+  <a href="" target="_blank" rel="noreferrer"> <img src="https://github.com/acampi/acampi/blob/main/certif_ds4b_102R.png" alt="ds4b_102R" width="400" height="300"/></a>
 </blockquote></details>
 
 <details><summary> ⚙️ <strong>5. Advanced Shiny Apps with AWS</strong> 🛠️☁️ </summary><blockquote>
