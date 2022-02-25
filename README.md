@@ -6,13 +6,17 @@
 
 - 🌱 I’m currently learning **Javascript & D3**
 
-- 👨‍💻 All of my projects are available at [https://github.com/acampi](https://github.com/acampi)
+- 👨‍💻 Links to all of my projects are available
 
-- 💬 Ask me about **my analytics projects**
+   * **[Shiny Apps](https://github.com/acampi)**
+
+   * **[Data Science Case Studies](https://github.com/acampi)**
+    
+   * **[Data Visualizations](https://github.com/acampi)**
 
 - 📫 How to reach me **albertcampillo@gmail.com**
 
-- 📄 Know about my experiences [https://github.com/acampi](https://github.com/acampi)
+- 📄 Know about my professional background [Work Experience](https://github.com/acampi)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
