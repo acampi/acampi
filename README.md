@@ -7,8 +7,17 @@
 - 👨‍💻 Check out all of my projects in the following links:
 
    * **[Shiny Apps](https://github.com/acampi/MyShinyApps)** 
-
-   * **[Data Science Case Studies](https://github.com/acampi/DSCases)**
+     * **Customer Lifetime Value** prediction [app](https://campillo.shinyapps.io/customer_lifetime_value_app/) 
+       <br>xxx
+     * **Marketing Mix Modeling** [app]()
+       <br>xxx
+     * **Google Analytics Traffic** forecast [app]()
+       <br>xxx
+     * **Customer Churn Analytics** [app]()
+       <br>xxx
+     * **Retail Sales** dashboard & forecaster [app]()
+       <br>xxx
+      
     
    * **[Data Visualizations](https://github.com/acampi/MyDataVisualizations)**
 
