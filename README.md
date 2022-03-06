@@ -6,24 +6,38 @@
 
 - 👨‍💻 Check out all of my projects in the following links:
 
-   * **[Shiny Apps](https://github.com/acampi/MyShinyApps)** 
-     * **Customer Lifetime Value** prediction [app](https://campillo.shinyapps.io/customer_lifetime_value_app/) 
-       <br>xxx
-     * **Marketing Mix Modeling** [app]()
-       <br>xxx
-     * **Google Analytics Traffic** forecast [app]()
-       <br>xxx
-     * **Customer Churn Analytics** [app]()
-       <br>xxx
-     * **Retail Sales** dashboard & forecaster [app]()
-       <br>xxx
+   * **[Shiny Apps]** 
+      <br> Note: All the apps looks a bit sketchy now as they are working progress. I prioritized showcasing the business problem I aim to solve and pack the results in a practical app rather than putting too much time in their look & feel. You can have a taste of my visualization skills by checking my data visualization in the section below.
+     * **Customer Lifetime Value (CLV)** prediction [app](https://campillo.shinyapps.io/customer_lifetime_value_app/)
+       <br>_**Business Problem**_: **Which customers should a company focus on?**
+       <br>_**Rationale**_: Determine the CLV of each customer to address the prioritization problem.
+       <br>_**Methodology**_: I use Machine Learning to answer two fundamental questions in determining a customer's CLV
+       <br>  _1. How much a customer will spend in the future (Regression problem)_
+       <br>  _2. Probability that a customer will make another purchase (Classification problem)_
+       <br> <img src="https://github.com/acampi/acampi/blob/main/CLV.png" alt="shiny" width="700" height="450"/>
+       <br>
+     * **Marketing Mix Modeling** [app](https://campillo.shinyapps.io/02_robyn_app/)
+       <br>**Business problem: How should a company allocate its media budget in order to maximize ROI?**
+       <br>_**Rationale**_: Organizations have a conversion funnel that generates ROI from advertising. Marketing budget are not perfect and budget misallocation results in missed revenues. Better budgeting translates into better revenues.
+       <br>_**Methology**_: I use Facebook's Robyn, an automated, open-source algorithm for mixed media modeling. It implements MMM best practices, including seasonality adjustments, advanced optimization to automate budget allocation that reduces human bias.
+       <br> <img src="https://github.com/acampi/acampi/blob/main/MMM.png" alt="shiny" width="700" height="450"/>
+       <br>
+     * **Google Analytics Traffic** forecast [app](https://campillo.shinyapps.io/website_traffic_forecaster/)
+       <br>**Business Problem: How can a company understand and predict a user behaviour from its website traffic?**
+       <br>_**Rationale**_: Understanding your website behaviour implies optimizing your content towards more sales & increased revenue.
+       <br>_**Methology**_: I use time series nested forecasting and a collection of machine learning models (xgboost, exponential smoothing, prophet & adam regression) to answer the following:
+       <br>  _1. Which pages have gone viral._
+       <br>  _2. What affects web traffic for specific pages of a website._
+       <br>  _3. What are the projected trends going forward._
+       <br> <img src="https://github.com/acampi/acampi/blob/main/GA%20forecast.png" alt="shiny" width="700" height="450"/>
+       <br>
+       <br>
       
     
    * **[Data Visualizations](https://github.com/acampi/MyDataVisualizations)**
+<br>
 
 - 📫 Email me at **albertcampillo@gmail.com**
-
-- 📄 Know about my professional background [Work Experience](https://github.com/acampi)
 
 - 🌱 I’m currently **improving** my *Python* skills and **learning** *Javascript & D3* 
 
