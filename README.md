@@ -4,18 +4,20 @@
 
 <h3 align="center">A business analytics professional & full stack R developer, former Big-4 consultant and in-house financial analyst with over 10 years’ experience, passionate about fostering the data analytics practice across organizations & teams to drive business insights. Holder of a bachelor degree in Economics, an MSc in Data Analytics and several technical diplomas. Spanish citizenship, fluent in 4 languages.</h3>
 
+<p align="center">
+<a href="https://www.linkedin.com/in/albertcampillo/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/albertcampillo/" height="25" width="35" /></a>
+<a href="https://twitter.com/albertcampillo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="albertcampillo" height="25" width="35" /></a>
+<a href="https://www.kaggle.com/albertcampillo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="https://www.kaggle.com/albertcampillo" height="25" width="35" /></a>
+</p>
+
 <h3 align="left">More about me:</h3>
       
 
 - 🌱 I’m currently **improving** my *Python* skills and **learning** *Javascript & D3* 
 
-- 📫 Email me at **albertcampillo@gmail.com** or reach out 
+- 📫 Email me at **albertcampillo@gmail.com** 
 
-<p align="left">
-<a href="https://www.linkedin.com/in/albertcampillo/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/albertcampillo/" height="25" width="35" /></a>
-<a href="https://twitter.com/albertcampillo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="albertcampillo" height="25" width="35" /></a>
-<a href="https://www.kaggle.com/albertcampillo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="https://www.kaggle.com/albertcampillo" height="25" width="35" /></a>
-</p>
+
 <details><summary><strong>Languages and Tools</strong> I use</summary>
   <blockquote>
     <br>
@@ -255,12 +257,18 @@ Introduction bla bla bla. Use the ▶️ button to expand/collapse sections/ pro
 
 <br>
 <details open><summary><strong> 📊 Data Visualizations </strong></summary>
-  <blockquote>
-  
-  
-    
-    
-    
+<blockquote>
+   <br>
+   <details><summary> My Visualizations </summary>
+      <blockquote>
+        my own projects
+      </blockquote>
+   </details>
+   <details><summary> Tidy Tuesday </summary>
+      <blockquote>
+        my own projects
+      </blockquote>
+   </details>
   </blockquote>
 </details>
 
