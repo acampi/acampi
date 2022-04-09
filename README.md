@@ -112,20 +112,25 @@ Introduction bla bla bla. Use the ▶️ button to expand/collapse sections/ pro
   <!-- Project 2-->
   <details><summary>✅2. Predicting <strong>Customer Lifetime Value</strong> (CLV) <a href="https://campillo.shinyapps.io/customer_lifetime_value_app/">app</a></summary>
     <blockquote>
-      <p>CLV (the profit from estimated by the future relationship with a customer) 😊</p>
+      <p>A company called CDNow is interested to determine the <strong>Customer Lifetime Value (CLV)</strong> of their customer base. The CLV is the estimated profit from the future relationship with a given customer. To do so, I use the company's sales records, a transactional database of 65k sales from 23k customers during the period Jan'97 to Jun'98 (18 months)</p>
       <ul>
-        <li><strong>Business Problem: Which customers should a company focus on?</strong> To answer this, I seek to understand which customers:</li>
+        <li><strong>Business Problem: Which customers should a company focus on?</strong> Focus on those with the <em>greatest future spend</em> and <em>highest probability</em> of future spend. Once the prioritization problem is addressed, CDNow will be able to make informed decisions on questions such as:</li>
         <ul>
-          <li><em>Have the highest spend probability in the next 90 days?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
+          <li><em>Which customers have the highest spend probability in the next N-days?</em></li>
+          <li><em>Which customers recently purchased but are unlikely to buy again?</em></li>
+          <li><em>Which customers were predicted to purchase but didn't (missed opportunities)</em></li>
         </ul>
         <br>
-        <li><strong>Rationale:</strong> Determine the CLV of each customer to address the prioritization problem (which customers to focus on). My CLV definition is based on a 2-side approach, which answer the following:</li>
-        <ol>
-          <li>How much will a customer spend in the next N-days? <em>Regression Problem</em></li>
-          <li>What is the probability that a customer will make another purchase in the next N-days?  <light><em>Classification problem</em></light></li>
-        </ol>
+        <li><strong>Rationale:</strong> Define the CLV for each customer. 
+        Assumptions:
+        <ul>
+          <li>Litefime Value will be determined within the next 90 days time horizon </li>
+          <li>CLV based on a 2-side approach and will use 2 machine learning models:</li>
+          <ol>
+            <li>How much will a customer spend in the next 90 days? <em>Regression Model</em></li>
+            <li>What is the probability that a customer will make another purchase in the next 90-days?  <light><em>Classification Model</em></light></li>
+          </ol>
+        </ul>
         <br>
         <li><strong>Final Result:</strong></li>
         <img src="https://github.com/acampi/acampi/blob/main/CLV.png" alt="shiny"/>
@@ -137,39 +142,41 @@ Introduction bla bla bla. Use the ▶️ button to expand/collapse sections/ pro
           <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img1.png" alt="methodology"/>
           bla bla bla
           <ul>
-            <li><strong>1. Cohort Definition</strong> <em> (cohort: first time purchasers within 90-days time window)</em></li>
+            <li><strong>1. Cohort Definition</strong> <em> (my cohort: first time purchasers within 90-days time window)</em></li>
               <ul>
                 <li>Find min date for each customer</li>
-                <li>Check span of dates across dataset <em>(i.e. Jan’97 - Jun’98)</em></li>
-                <li>Select 90-days range <em>(ie. Jan’97 - Mar’97)</em></li>
-                <li>Select all customer ids with first purchase within the date range</li>
+                <li>Check span of dates across dataset <em>(i.e. Jan’97 - Jun’98)</em> and select customers within the first 90 days range <em>(ie. Jan’97 - Mar’97)</em> </li>
                 <li>Subset dataset showcasing transactions for those customers only</li>
+                <br>
+                <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img2.png">
               </ul>
             <br>
             <li><strong>2. Data Preprocessing for ML</strong></li>
             <ul>
-              <li>Step 1</li>
+              <li><strong>Random customer splitting:</strong> subset the full database into</li>
               <ul>
-                <li>Random split of customer base (80% train / 20% test -for model accuracy assessment-)</li>
-                <li>Create a Train Set (Split 1) & Test Set (Split 2)</li>
+                <li><strong>Split 1</strong> (<em> for model training</em>): 80% of customers' transactions (train)</li>
+                <li><strong>Split 2</strong> (<em>for model accuracy</em>): remaining 20% of customers' transactions (test)</li>
               </ul>
-              <li>Step 2</li>
+              <li><strong>Time splitting</strong>: For both Split 1 & Split 2, break down the dataset into 2 time sets</li>
               <ul>
-                <li>Breakdown the train Set (Split 1) in 2:</li>
-                <ul>
-                  <li>Full Set - 90 days (for Training)</li>
-                  <li>Last 90 days (for Testing)</li>
-                </ul>
-                <li>Replicate previous approach with test set (Split 2)</li>
+                <li><strong>Train Set</strong> = Full Set - 90 days </li>
+                <li><strong>Test Set</strong> = Last 90 days </li>
               </ul>
             </ul>
             <br>
-            <li><strong>3. RFM Feature Engineering</strong></li>
+            <li><strong>3. Feature Engineering</strong></li>
+            Define the target variables and the predictors to use in the ML models 
             <ul>
-              <li>For Train sets on both Split 1 & Split 2, create feature variables that will be used as predictors for the 2 machine learning models we will create.</li>
-              <li>Features:</li>
+              <li><strong>Target variables</strong>:</li>
               <ul>
-                <li><trong>Recency:</strong> how many days since the last purchase</li>
+                <li><strong>spend_90_total</strong>: total amount spend in the next 90 days</li>
+                <li><strong>spend_90_prob</strong>: probability of spend in the next 90 days</li>
+              </ul>
+              <br>
+              <li><strong>Predictors</strong>(RFM Features):</li>
+              <ul>
+                <li><strong>Recency:</strong> how many days since the last purchase</li>
                 <li><strong>Frequency:</strong> number of purchases a customer has done during the train period</li>
                 <li><strong>Monetary:</strong> total purchase value of a given customer during train period</li>
                 <li><strong>Monetary mean:</strong> mean purchase value of a given customer among all purchases during train period</li>
@@ -177,14 +184,11 @@ Introduction bla bla bla. Use the ▶️ button to expand/collapse sections/ pro
             </ul>
             <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img3.png" alt="methodology"/>
             <br>
-            <li><strong>4. ML Model definition</strong></li>
+            <li><strong>4. ML Model Phase </strong>: </li>
+            I preliminarly define the target variable and set of predictors upon which each ML model will be fit into the train set. The 2 models used are:  
             <ul>
-              <li>2 models used:</li>
-              <ul>
-                <li><strong>Regression model</strong>: predict amount spent of a given customer in the next 90 days</li>
-                <li><strong>Classification model</strong>: predict the probability of a given customer purchasing in the next 90 days</li>
-              </ul>
-              <li></li>
+              <li><strong>Regression model</strong>: predict amount spent of a given customer in the next 90 days. I use XGBoost algorithm for regression and model performance is measured through <strong>RSME</strong></li>
+              <li><strong>Classification model</strong>: predict the probability of a given customer purchasing in the next 90 days. I also use XGBoost for classification and model performance is measured through <strong>logloss</strong></li>
             <ul>
           </ul>
           </blockquote>
@@ -259,14 +263,15 @@ Introduction bla bla bla. Use the ▶️ button to expand/collapse sections/ pro
 <details open><summary><strong> 📊 Data Visualizations </strong></summary>
 <blockquote>
    <br>
-   <details><summary> My Visualizations </summary>
+   <details><summary><strong> My Visualizations </strong></summary>
       <blockquote>
-        my own projects
+        A collection of data visualizations that I created from public data sources. 
+        <a href="https://github.com/acampi/DataVisualizations">Go to repository</a>
       </blockquote>
    </details>
-   <details><summary> Tidy Tuesday </summary>
+   <details><summary><strong> Tidy Tuesday </strong></summary>
       <blockquote>
-        my own projects
+            My contributions to #TidyTuesday challenge, a weekly social data project by Thomas Mock and R4DS Online Learning Community that focuses on data wrangling and visualisation. <a href="https://github.com/acampi/Tidytuesday">Go to repository</a>
       </blockquote>
    </details>
   </blockquote>
