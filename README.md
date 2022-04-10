@@ -77,9 +77,9 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
         <br>
         <li><strong>Rationale</strong>: the approach used solves demand forecasting for 1 time series (1 product) first and, once validated, it is scaled to all other products through an <em>iterative</em> process. This process is executed with three key considerations in mind:</li> 
         <ul>
-          <li>1. Demand forecast <strong> 90 days forward</strong> into the future </li>
-          <li>2. Each time series will run into <strong>three different ML models</strong>, producing one forecast each. The best performing model within the test set will be applied to forecast demand for the next 90 days (future period) </li>
-          <li>3. The procedure will use the <strong>Nested Modelling</strong> approach (slower than the <strong>global modeling</strong> one but more accurate)</li>
+          <li>1. Demand forecast considers <strong> 90 days forward</strong> (future period) for each product </li>
+          <li>2. Each time series will run into <strong>three different ML models</strong> (2 XGBoost & 1 Temporal Hierarchical Forecasting <em>explained below</em>, each one producing a forecast. The best performing model within the test set will be selected and stored to forecast demand for the future period </li>
+          <li>3. The iterative process uses a <strong>Nested Modelling</strong> approach (time consuming but results accurate)</li>
         </ul>
         <br>
         <li><strong>Final Result:</strong></li>
@@ -90,30 +90,34 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
           <blockquote>
           <img src="https://github.com/acampi/acampi/blob/main/nested_ts_1.png" alt="methodology"/>
           <br>
-          The following describes the entire process described in previous section. As mentioned, for each time series, we apply 3 ML models (each one producing a forecast). Results are stored in an iterative process via nested modeling. The best performing model is chosen to retrain on the full dataset and forecast 90 days forward (future period).
+          This is the step-by-step methodology implemented & described in previous section. In a nutshell, for each time series, we apply 3 ML models (each one producing a forecast). Results are compared against a test set (actual data). The best performing model is stored via an iterative process (nested modeling) and later used to retrain on the full dataset prior to forecast 90 days forward (future period).
           <br><br>
           <ul>
-            <li><strong>1. Data Preparation</strong>. In order to handle each product in the dataset separarely: </li> 
+            <li><strong>1. Data Preparation</strong>. The dataset is treated as a nested structure, where each product is handled individually. Steps: </li> 
             <ul>
               <li>Group dataset by product (time series) </li>
-              <li>Split each time series into </strong>train set</strong> (80% of data) and <strong>test set</strong> (remaining 20%, equals last 90 days)</strong> </li>
-              <li>xx</li>
-              <li>xx</li>
-              <li>xx</li>
+              <li>Split each time series into <strong>train set</strong> (80% of data) and <strong>test set</strong> (remaining 20%). Assumption: test set equals last 90 days of actual data)</strong> </li>
+              <li>Extend actual timeseries 90 days forward into the future (at this stage, it is an empty 90 days dataset with empty values)</li>
             </ul>
             <br>
             <li><strong>2. Data Preprocessing for ML</strong></li>
+            Prepare the dataset (equivalent to preparing a <strong>recipe</strong>) to be used with each ML model accordingly. Therefore:     
             <br>
-            <li><strong>3. Feature Engineering</strong></li>
+            <ul>
+              <li><strong>XGBoost recipe</strong>: demand as a function of all predictors.</li> 
+                  A bunch of time series related predictors have been generated from date variable (date removed from modeling, along with zero variance predictors). Some of these predictors are later converted into dummy variables.  
+                  <li><strong>THIEF</strong> (Temporal Hierarchical Forecasting): an algorithm that aggregates the time series and ensembles the forecast. For this one, we will just use the preliminary dataset (no additional features created in a recipe)</li>
+            </ul>
+            <br>
+            <li><strong>3. Model Preparation</strong>: define the <strong>workflow</strong> to be applied to each of the 3 models deployed.</li>
+            Each workflow consists of a model definition (either xgboost or thief in our case) + the recipe prepared for each. As mentioned earlier, 2 XGBoost models are used. The difference between them is the learn rate applied (0.35 for Model 1, 0.50 for Model 2)            
             <img src="https://github.com/acampi/acampi/blob/main/nested_ts_2.png" alt="methodology"/>
             <br>
-            <li><strong>4. ML Model definition</strong></li>
+            <li><strong>4. Try 1 Time Series First, then the next 99 </strong></li>
+            Take 1 Time series, fit each of the 3 models into the train & test sets. Once this first process is completed and verified with no errors, the remaining 99 time series will run iteratively
           </ul>
           </blockquote>
           </detail>
-        <br>
-        <br>
-      <li><strong>Final Result</strong></li>
       </ul>
     </blockquote>
   </details>
@@ -372,52 +376,8 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
   <!-- Project 6 -->
   <details><summary>🔶6. <strong>Forecasting </strong> Singapore's Resale Housing Market</summary>
     <blockquote>
-      <p>CLV (the profit from estimated by the future relationship with a customer) 😊</p>
-      <ul>
-        <li><strong>Business Problem: Which customers should a company focus on?</strong> To answer this, I seek to understand which customers:</li>
-        <ul>
-          <li><em>Have the highest spend probability in the next 90 days?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
-        </ul>
-        <br>
-        <li><strong>Rationale:</strong> Determine the CLV of each customer to address the prioritization problem (which customers to focus on). My CLV definition is based on a 2-side approach, which answer the following:</li>
-        <ol>
-          <li>How much will a customer spend in the next N-days? <em>Regression Problem</em></li>
-          <li>What is the probability that a customer will make another purchase in the next N-days?  <light><em>Classification problem</em></light></li>
-        </ol>
-        <br>
-        <li><strong>Final Result:</strong></li>
-        <img src="https://github.com/acampi/acampi/blob/main/CLV.png" alt="shiny"/>
-        <br>
-        <li><strong>Methodology:</strong></li>
-          <details open><summary> see in-depth procedure </summary>
-          <blockquote>
-          <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img1.png" alt="methodology"/>
-          bla bla bla
-          <ul>
-            <li><strong>1. Cohort Definition</strong> <em> (cohort: first time purchasers within 90-days time window)</em></li>
-              <ul>
-                <li>Find min date for each customer</li>
-                <li>Check span of dates across dataset <em>(i.e. Jan’97 - Jun’98)</em></li>
-                <li>Select 90-days range <em>(ie. Jan’97 - Mar’97)</em></li>
-                <li>Select all customer ids with first purchase within the date range</li>
-                <li>Subset dataset showcasing transactions for those customers only</li>
-              </ul>
-            <br>
-            <li><strong>2. Data Preprocessing for ML</strong></li>
-            <br>
-            <li><strong>3. RFM Feature Engineering</strong></li>
-            <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img3.png" alt="methodology"/>
-            <br>
-            <li><strong>4. ML Model definition</strong></li>
-          </ul>
-          </blockquote>
-          </detail>
-        <br>
-        <br>
-      <li><strong>Final Result</strong></li>
-      </ul>
+      <br>    
+      More on this project coming soon
     </blockquote>
   </details>
     
