@@ -55,7 +55,7 @@ This section encompasses two types of outputs:
   3 types of apps:
     <ul>
       <li>✅: app is live and can be checked at any time on the app link </li>
-      <li>🔷: app is not live. Please request access</li>
+      <li>🔷: app is not live. If interested, please reach out and I will grant temporary access</li>
       <li>🔶: work in progress. The project/ app will be completed soon</li>
     </ul> 
   <br>    
@@ -70,43 +70,42 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
   <!-- Project 1 -->
   <details><summary>✅1. <strong>Nested Time Series:</strong> Forecasting Demand for a Company's Portfolio Products <a href="https://campillo.shinyapps.io/customer_lifetime_value_app/">app</a></summary>
     <blockquote>
-      <p>CLV (the profit from estimated by the future relationship with a customer) 😊</p>
+      <br>
+      <p>A well-known company in the retail industry wants to better understand the future demand for their products in views of optimizing their internal supply chain. Their product portfolio comprises 100 different SKUs and they seek a solution to forecast demand for multiple products at scale. The dataset comes from <em>Kaggle's M5 competition</em> and can be found <a href="https://www.kaggle.com/c/m5-forecasting-accuracy"> here</a></p>
       <ul>
-        <li><strong>Business Problem: Which customers should a company focus on?</strong> To answer this, I seek to understand which customers:</li>
+        <li><strong>Business Problem: How can we forecast future demand for many products at once? </strong>In other words, how can we automate time series forecasting on big scale?:</li>
+        <br>
+        <li><strong>Rationale</strong>: the approach used solves demand forecasting for 1 time series (1 product) first and, once validated, it is scaled to all other products through an <em>iterative</em> process. This process is executed with three key considerations in mind:</li> 
         <ul>
-          <li><em>Have the highest spend probability in the next 90 days?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
+          <li>1. Demand forecast <strong> 90 days forward</strong> into the future </li>
+          <li>2. Each time series will run into <strong>three different ML models</strong>, producing one forecast each. The best performing model within the test set will be applied to forecast demand for the next 90 days (future period) </li>
+          <li>3. The procedure will use the <strong>Nested Modelling</strong> approach (slower than the <strong>global modeling</strong> one but more accurate)</li>
         </ul>
         <br>
-        <li><strong>Rationale:</strong> Determine the CLV of each customer to address the prioritization problem (which customers to focus on). My CLV definition is based on a 2-side approach, which answer the following:</li>
-        <ol>
-          <li>How much will a customer spend in the next N-days? <em>Regression Problem</em></li>
-          <li>What is the probability that a customer will make another purchase in the next N-days?  <light><em>Classification problem</em></light></li>
-        </ol>
-        <br>
         <li><strong>Final Result:</strong></li>
-        <img src="https://github.com/acampi/acampi/blob/main/CLV.png" alt="shiny"/>
+        <img src="https://github.com/acampi/acampi/blob/main/nested_ts_3.png" alt="nested timeseries"/>
         <br>
         <li><strong>Methodology:</strong></li>
           <details open><summary> see in-depth procedure </summary>
           <blockquote>
-          <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img1.png" alt="methodology"/>
-          bla bla bla
+          <img src="https://github.com/acampi/acampi/blob/main/nested_ts_1.png" alt="methodology"/>
+          <br>
+          The following describes the entire process described in previous section. As mentioned, for each time series, we apply 3 ML models (each one producing a forecast). Results are stored in an iterative process via nested modeling. The best performing model is chosen to retrain on the full dataset and forecast 90 days forward (future period).
+          <br><br>
           <ul>
-            <li><strong>1. Cohort Definition</strong> <em> (cohort: first time purchasers within 90-days time window)</em></li>
-              <ul>
-                <li>Find min date for each customer</li>
-                <li>Check span of dates across dataset <em>(i.e. Jan’97 - Jun’98)</em></li>
-                <li>Select 90-days range <em>(ie. Jan’97 - Mar’97)</em></li>
-                <li>Select all customer ids with first purchase within the date range</li>
-                <li>Subset dataset showcasing transactions for those customers only</li>
-              </ul>
+            <li><strong>1. Data Preparation</strong>. In order to handle each product in the dataset separarely: </li> 
+            <ul>
+              <li>Group dataset by product (time series) </li>
+              <li>Split each time series into </strong>train set</strong> (80% of data) and <strong>test set</strong> (remaining 20%, equals last 90 days)</strong> </li>
+              <li>xx</li>
+              <li>xx</li>
+              <li>xx</li>
+            </ul>
             <br>
             <li><strong>2. Data Preprocessing for ML</strong></li>
             <br>
-            <li><strong>3. RFM Feature Engineering</strong></li>
-            <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img3.png" alt="methodology"/>
+            <li><strong>3. Feature Engineering</strong></li>
+            <img src="https://github.com/acampi/acampi/blob/main/nested_ts_2.png" alt="methodology"/>
             <br>
             <li><strong>4. ML Model definition</strong></li>
           </ul>
@@ -123,6 +122,7 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
   <!-- Project 2-->
   <details><summary>✅2. Predicting <strong>Customer Lifetime Value</strong> (CLV) <a href="https://campillo.shinyapps.io/customer_lifetime_value_app/">app</a></summary>
     <blockquote>
+      <br>
       <p>A company called CDNow is interested to determine the <strong>Customer Lifetime Value (CLV)</strong> of their customer base. The CLV is the estimated profit from the future relationship with a given customer. To do so, I use the company's sales records, a transactional database of 65k sales from 23k customers during the period Jan'97 to Jun'98 (18 months)</p>
       <ul>
         <li><strong>Business Problem: Which customers should a company focus on?</strong> Focus on those with the <em>greatest future spend</em> and <em>highest probability</em> of future spend. Once the prioritization problem is addressed, CDNow will be able to make informed decisions on questions such as:</li>
