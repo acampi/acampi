@@ -163,7 +163,7 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
                 <li>Check span of dates across dataset <em>(i.e. Jan’97 - Jun’98)</em> and select customers within the first 90 days range <em>(ie. Jan’97 - Mar’97)</em> </li>
                 <li>Subset dataset showcasing transactions for those customers only</li>
                 <br>
-                <img src="https://github.com/acampi/acampi/blob/main/clv_2.png">
+                <img src="https://github.com/acampi/acampi/blob/main/clv_2_1.png">
               </ul>
             <br>
             <li><strong>2. Data Preprocessing for ML</strong></li>
@@ -217,110 +217,88 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
   
     
   <!-- Project 3 -->
-  <details><summary>✅3. NASDAQ Stock Analyzer using <strong>Spark </strong><a href="https://campillo.shinyapps.io/customer_lifetime_value_app/">app</a></summary>
+  <details><summary>✅3. NASDAQ Stock Analyzer <a href="https://campillo.shinyapps.io/02_stock_screener_app/">app</a> using <strong> Apache Spark </strong></summary>
     <blockquote>
-      <p>CLV (the profit from estimated by the future relationship with a customer) 😊</p>
+      <br>
+      <p>A retail investor is interested in growing his/ her personal wealth by building a portfolio of stocks traded at NASDAQ. This individual is not a savvy investor but seeks to understand which stocks' have had a good past performance to further assess whether to pick them or not. The dataset used comprises daily stock performance for over 4,500 stocks during the last 10 years (5.8 million instances).
+</p>
       <ul>
-        <li><strong>Business Problem: Which customers should a company focus on?</strong> To answer this, I seek to understand which customers:</li>
+        <li><strong>Business Problem</strong>: Hundreds of stocks traded in NASDAQ to sift through. Which ones to pick? </li>
+        Two preliminary considerations need to be addressed for this problem:
         <ul>
-          <li><em>Have the highest spend probability in the next 90 days?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
+          <li>1. Which metric(s) will be used to differentiate between good and bad stocks?</li>
+          <li>2. How to deal with a massive dataset efficiently?</li>
         </ul>
         <br>
-        <li><strong>Rationale:</strong> Determine the CLV of each customer to address the prioritization problem (which customers to focus on). My CLV definition is based on a 2-side approach, which answer the following:</li>
+        <li><strong>Rationale:</strong> :</li>
         <ol>
-          <li>How much will a customer spend in the next N-days? <em>Regression Problem</em></li>
-          <li>What is the probability that a customer will make another purchase in the next N-days?  <light><em>Classification problem</em></light></li>
+          <li><strong> Business consideration</strong>. For each stock, I will use these <em>two metrics</em>combined:</li>
+            <ul>
+              <li><strong>Profitability metric </strong>: daily average return (how much the stock increases per day, in percentual terms)</li>
+              <li><strong>Risk metric</strong>: standard deviation of its return (measure of a stock's volatility) </li>
+            </ul>
+          <li><strong>Tehcnical consideration.</strong> This large dataset needs a big data approach.</li>
         </ol>
         <br>
         <li><strong>Final Result:</strong></li>
-        <img src="https://github.com/acampi/acampi/blob/main/CLV.png" alt="shiny"/>
+        <img src="https://github.com/acampi/acampi/blob/main/spark_2.png" alt="shiny"/>
         <br>
         <li><strong>Methodology:</strong></li>
           <details open><summary> see in-depth procedure </summary>
           <blockquote>
-          <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img1.png" alt="methodology"/>
-          bla bla bla
+          <img src="https://github.com/acampi/acampi/blob/main/spark_1.png" alt="methodology"/>
+          <br>
           <ul>
-            <li><strong>1. Cohort Definition</strong> <em> (cohort: first time purchasers within 90-days time window)</em></li>
-              <ul>
-                <li>Find min date for each customer</li>
-                <li>Check span of dates across dataset <em>(i.e. Jan’97 - Jun’98)</em></li>
-                <li>Select 90-days range <em>(ie. Jan’97 - Mar’97)</em></li>
-                <li>Select all customer ids with first purchase within the date range</li>
-                <li>Subset dataset showcasing transactions for those customers only</li>
-              </ul>
+            <li><strong>Part 1: Spark</strong></li>
             <br>
-            <li><strong>2. Data Preprocessing for ML</strong></li>
+            <li><strong>Part 2: Data Wrangling/ Analysis in R</strong></li>
             <br>
-            <li><strong>3. RFM Feature Engineering</strong></li>
-            <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img3.png" alt="methodology"/>
-            <br>
-            <li><strong>4. ML Model definition</strong></li>
           </ul>
           </blockquote>
           </detail>
         <br>
         <br>
-      <li><strong>Final Result</strong></li>
-      </ul>
+       </ul>
     </blockquote>
   </details>
-  
+          
   <!-- Project 4 -->
-  <details><summary>✅4. <strong>Risk Analysis</strong>: From Excel to R <a href="https://campillo.shinyapps.io/customer_lifetime_value_app/">app</a></summary>
+  <details><summary>✅4. <strong>Risk Analysis</strong>: From Excel to R <a href="">app</a></summary>
     <blockquote>
-      <p>CLV (the profit from estimated by the future relationship with a customer) 😊</p>
+      <p>xxx</p>
       <ul>
-        <li><strong>Business Problem: Which customers should a company focus on?</strong> To answer this, I seek to understand which customers:</li>
-        <ul>
-          <li><em>Have the highest spend probability in the next 90 days?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
-        </ul>
+        <li><strong>Business Problem:</strong> xxx</li>
         <br>
-        <li><strong>Rationale:</strong> Determine the CLV of each customer to address the prioritization problem (which customers to focus on). My CLV definition is based on a 2-side approach, which answer the following:</li>
+        <li><strong>Rationale:</strong> xxx</li>
         <ol>
-          <li>How much will a customer spend in the next N-days? <em>Regression Problem</em></li>
-          <li>What is the probability that a customer will make another purchase in the next N-days?  <light><em>Classification problem</em></light></li>
+          <li>xxx</li>
+          <li>xxx</li>
         </ol>
         <br>
         <li><strong>Final Result:</strong></li>
-        <img src="https://github.com/acampi/acampi/blob/main/CLV.png" alt="shiny"/>
+        <img src="" alt="risk_analysis_app"/>
         <br>
         <li><strong>Methodology:</strong></li>
           <details open><summary> see in-depth procedure </summary>
           <blockquote>
-          <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img1.png" alt="methodology"/>
-          bla bla bla
+          <img src="" alt="methodology"/>
           <ul>
-            <li><strong>1. Cohort Definition</strong> <em> (cohort: first time purchasers within 90-days time window)</em></li>
-              <ul>
-                <li>Find min date for each customer</li>
-                <li>Check span of dates across dataset <em>(i.e. Jan’97 - Jun’98)</em></li>
-                <li>Select 90-days range <em>(ie. Jan’97 - Mar’97)</em></li>
-                <li>Select all customer ids with first purchase within the date range</li>
-                <li>Subset dataset showcasing transactions for those customers only</li>
-              </ul>
+            <li><strong>1. xxx</strong> xxx</li>
             <br>
-            <li><strong>2. Data Preprocessing for ML</strong></li>
+            <li><strong>2. xxx</strong></li>
             <br>
-            <li><strong>3. RFM Feature Engineering</strong></li>
-            <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img3.png" alt="methodology"/>
+            <li><strong>3. xxx</strong></li>
             <br>
-            <li><strong>4. ML Model definition</strong></li>
+            <li><strong>4. xxx</strong></li>
           </ul>
           </blockquote>
           </detail>
         <br>
         <br>
-      <li><strong>Final Result</strong></li>
       </ul>
     </blockquote>
   </details>
-   
-  
+           
   <!-- Project 5 -->
   <details><summary>🔷5. <strong>Marketing Mix Modeling</strong><a href="https://campillo.shinyapps.io/customer_lifetime_value_app/"> app</a></summary>
     <blockquote>
@@ -372,7 +350,7 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
       </ul>
     </blockquote>
   </details>
-  
+          
   <!-- Project 6 -->
   <details><summary>🔶6. <strong>Forecasting </strong> Singapore's Resale Housing Market</summary>
     <blockquote>
