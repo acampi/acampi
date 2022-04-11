@@ -2,7 +2,7 @@
 
 <h1 align="center">Hi 👋, I'm Albert</h1>
 
-<h3 align="center">A business analytics professional & full stack R developer, former Big-4 consultant and in-house financial analyst with over 10 years’ experience, passionate about fostering the data analytics practice across organizations & teams to drive business insights. Holder of a bachelor degree in Economics, an MSc in Data Analytics and several technical diplomas. Spanish citizenship, fluent in 4 languages.</h3>
+<h3 align="center">A business analytics professional & full stack R developer, former Big-4 consultant and in-house financial analyst with over 10 years’ experience, passionate about fostering the data analytics practice across organizations & teams to drive business insights. Holder of a bachelor degree in Economics, an MSc in Data Analytics and several technical diplomas.</h3>
 
 <p align="center">
 <a href="https://www.linkedin.com/in/albertcampillo/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/albertcampillo/" height="25" width="35" /></a>
@@ -12,10 +12,15 @@
 
 <h3 align="left">More about me:</h3>
       
+- 📍 I was born & raised in **Spain**, studied in **Canada** & **US**, and lived in **Switzerland** for the past 10 years.
 
-- 🌱 I’m currently **improving** my *Python* skills and **learning** *Javascript & D3* 
+- 📣 I can speak **English**, **French**, **Spanish** & **Catalan** fluently; conversational **Italian** & I recently started learning **Korean**.
 
-- 📫 Email me at **albertcampillo@gmail.com** 
+- 🌱 I’m currently **preparing** to take the 3 Microsoft Azure essentials certifications (Azure Essentials, Azure AI Essentials & Azure Data Essentials) end of April'22
+
+- 📈 I'm **completing** the course **High Performance Time Series in R** by Business Science University... a game changer for time series analysis.
+
+- 🚀 I am **scaling** my knowledge of **Shiny** (an open source technology to delevop user apps & dashboards) to meet the standards of my previous deliverables in **Tableau** & **Power BI** 
 
 
 <details><summary><strong>Languages and Tools</strong> I use</summary>
@@ -49,17 +54,18 @@
 <hr>
 
 <h3 align="left">My Portfolio</h3>
-This section encompasses two types of outputs:
+Welcome to my portfolio! In this section you will find a glimpse of the current projects I have been working on recently. Projects are grouped into 2 different categories:
+<br>
 <ul>
-  <li><strong>Shiny Apps</strong>: xxxx</li>
-  3 types of apps:
+  <li><strong>Shiny Apps</strong>: a series of data science-related projects, some of which are inspired in previous deliveries of my past working experience. Others are topics from my own areas of interest. Each project comprises of a business problem to solve, the approach to solution (rationale) and the methodology applied. The end result is presented as a simple, shiny app.</li>
+  Apps are categorized in three groups depending on each of the following icons:
     <ul>
       <li>✅: app is live and can be checked at any time on the app link </li>
       <li>🔷: app is not live. If interested, please reach out and I will grant temporary access</li>
       <li>🔶: work in progress. The project/ app will be completed soon</li>
     </ul> 
-  <br>    
-  <li><strong>Data Visualizations</strong>: xxx</li>
+  <br>
+  <li><strong>Data Visualizations</strong>: A selection of data visualizations I created from open source datasets, leveraging the power of data visualization packages in r such as <em>ggplot2</em>, <em>plotly</em>, <em>gt</em>, <em>gtExtra</em> & <em>reactable</em>.</li>
 </ul>
 Kindly use the ▶️ buttons to navigate through the expandable/collapse sections/ projects/ details.
 <br><br>
@@ -111,7 +117,7 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
             <br>
             <li><strong>3. Model Preparation</strong>: define the <strong>workflow</strong> to be applied to each of the 3 models deployed.</li>
             Each workflow consists of a model definition (either xgboost or thief in our case) + the recipe prepared for each. As mentioned earlier, 2 XGBoost models are used. The difference between them is the learn rate applied (0.35 for Model 1, 0.50 for Model 2)            
-            <img src="https://github.com/acampi/acampi/blob/main/nested_ts_2.png" alt="methodology"/>
+            <img src="https://github.com/acampi/acampi/blob/main/nested_ts_2_1.png" alt="methodology"/>
             <br>
             <li><strong>4. Try 1 Time Series First, then the next 99 </strong></li>
             Take 1 Time series, fit each of the 3 models into the train & test sets. Once this first process is completed and verified with no errors, the remaining 99 time series will run iteratively
@@ -163,7 +169,7 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
                 <li>Check span of dates across dataset <em>(i.e. Jan’97 - Jun’98)</em> and select customers within the first 90 days range <em>(ie. Jan’97 - Mar’97)</em> </li>
                 <li>Subset dataset showcasing transactions for those customers only</li>
                 <br>
-                <img src="https://github.com/acampi/acampi/blob/main/clv_2_1.png">
+                <img src="https://github.com/acampi/acampi/blob/main/clv_2.png">
               </ul>
             <br>
             <li><strong>2. Data Preprocessing for ML</strong></li>
@@ -244,14 +250,30 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
         <img src="https://github.com/acampi/acampi/blob/main/spark_2.png" alt="shiny"/>
         <br>
         <li><strong>Methodology:</strong></li>
-          <details open><summary> see in-depth procedure </summary>
+          <details open><summary> see in-depth procedure (coded)</summary>
           <blockquote>
           <img src="https://github.com/acampi/acampi/blob/main/spark_1.png" alt="methodology"/>
           <br>
           <ul>
             <li><strong>Part 1: Spark</strong></li>
+            For simplicity purposes, I will ran this part locally (Java installation required), but ideally I would ran it in the cloud via a cloud service provider (i.e. Databricks, AWS...)
+            <ul>
+              <li><strong>Connect</strong> to spark & set up main configurations: 
+                    i) number of cores to run to, 
+                    ii)laptop RAM memory in use, 
+                    iii) what fraction of previously defined RAM will be used for the process</li>
+              <li><strong>Data Wrangling</strong>. The dataset is then wrangled in a big data cluester, where I calculate the main performance metrics. The end result is a reduced dataset that will be used in R to do the main data analysis & end visualizations.</li>
+                <ul>
+                  <li>Load the dataset, grouped by stock ticker, arranged by date</li>
+                  <li>Calculate daily returns & summarise the given stock by the mean returns and standard deviation of its returns</li>
+                </ul>
+            </ul>
             <br>
             <li><strong>Part 2: Data Wrangling/ Analysis in R</strong></li>
+            <ul>
+              <li>To simplify the search I will focus on stocks with market cap avove $1bio & standad deviation below 1</li>
+              <li>The reward metric is based on a variation of the Sharpe ratio (mean return over standard deviation). The greater the ratio, the better the stock is.</li>
+            </ul>
             <br>
           </ul>
           </blockquote>
@@ -262,97 +284,9 @@ Kindly use the ▶️ buttons to navigate through the expandable/collapse sectio
     </blockquote>
   </details>
           
-  <!-- Project 4 -->
-  <details><summary>✅4. <strong>Risk Analysis</strong>: From Excel to R <a href="">app</a></summary>
-    <blockquote>
-      <p>xxx</p>
-      <ul>
-        <li><strong>Business Problem:</strong> xxx</li>
-        <br>
-        <li><strong>Rationale:</strong> xxx</li>
-        <ol>
-          <li>xxx</li>
-          <li>xxx</li>
-        </ol>
-        <br>
-        <li><strong>Final Result:</strong></li>
-        <img src="" alt="risk_analysis_app"/>
-        <br>
-        <li><strong>Methodology:</strong></li>
-          <details open><summary> see in-depth procedure </summary>
-          <blockquote>
-          <img src="" alt="methodology"/>
-          <ul>
-            <li><strong>1. xxx</strong> xxx</li>
-            <br>
-            <li><strong>2. xxx</strong></li>
-            <br>
-            <li><strong>3. xxx</strong></li>
-            <br>
-            <li><strong>4. xxx</strong></li>
-          </ul>
-          </blockquote>
-          </detail>
-        <br>
-        <br>
-      </ul>
-    </blockquote>
-  </details>
-           
-  <!-- Project 5 -->
-  <details><summary>🔷5. <strong>Marketing Mix Modeling</strong><a href="https://campillo.shinyapps.io/customer_lifetime_value_app/"> app</a></summary>
-    <blockquote>
-      <p>CLV (the profit from estimated by the future relationship with a customer) 😊</p>
-      <ul>
-        <li><strong>Business Problem: Which customers should a company focus on?</strong> To answer this, I seek to understand which customers:</li>
-        <ul>
-          <li><em>Have the highest spend probability in the next 90 days?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
-          <li><em>Have recently purchased but are unlikely to buy again?</em></li>
-        </ul>
-        <br>
-        <li><strong>Rationale:</strong> Determine the CLV of each customer to address the prioritization problem (which customers to focus on). My CLV definition is based on a 2-side approach, which answer the following:</li>
-        <ol>
-          <li>How much will a customer spend in the next N-days? <em>Regression Problem</em></li>
-          <li>What is the probability that a customer will make another purchase in the next N-days?  <light><em>Classification problem</em></light></li>
-        </ol>
-        <br>
-        <li><strong>Final Result:</strong></li>
-        <img src="https://github.com/acampi/acampi/blob/main/CLV.png" alt="shiny"/>
-        <br>
-        <li><strong>Methodology:</strong></li>
-          <details open><summary> see in-depth procedure </summary>
-          <blockquote>
-          <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img1.png" alt="methodology"/>
-          bla bla bla
-          <ul>
-            <li><strong>1. Cohort Definition</strong> <em> (cohort: first time purchasers within 90-days time window)</em></li>
-              <ul>
-                <li>Find min date for each customer</li>
-                <li>Check span of dates across dataset <em>(i.e. Jan’97 - Jun’98)</em></li>
-                <li>Select 90-days range <em>(ie. Jan’97 - Mar’97)</em></li>
-                <li>Select all customer ids with first purchase within the date range</li>
-                <li>Subset dataset showcasing transactions for those customers only</li>
-              </ul>
-            <br>
-            <li><strong>2. Data Preprocessing for ML</strong></li>
-            <br>
-            <li><strong>3. RFM Feature Engineering</strong></li>
-            <img src="https://github.com/acampi/readmepage/blob/main/img/lab_clv_img3.png" alt="methodology"/>
-            <br>
-            <li><strong>4. ML Model definition</strong></li>
-          </ul>
-          </blockquote>
-          </detail>
-        <br>
-        <br>
-      <li><strong>Final Result</strong></li>
-      </ul>
-    </blockquote>
-  </details>
           
   <!-- Project 6 -->
-  <details><summary>🔶6. <strong>Forecasting </strong> Singapore's Resale Housing Market</summary>
+  <details><summary>🔶4. <strong>Forecasting </strong> Singapore's Resale Housing Market</summary>
     <blockquote>
       <br>    
       More on this project coming soon
