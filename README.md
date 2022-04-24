@@ -16,9 +16,9 @@
 
 - 📣 I can speak **English**, **French**, **Spanish** & **Catalan** fluently; conversational **Italian** & I recently started learning **Korean**.
 
-- 🌱 I’m currently **preparing** to take the 3 Microsoft Azure essentials certifications (Azure Essentials, Azure AI Essentials & Azure Data Essentials) end of April'22
+- 🌱 I’m currently **preparing** to take the 3 Microsoft Azure essentials certifications next May'22
 
-- 📈 I'm **completing** the course **High Performance Time Series in R** by Business Science University... a game changer for time series analysis.
+- 📈 I'm also **completing** an expertise course on **High Performance Time Series in R**.
 
 - 🚀 I am **scaling** my knowledge of **Shiny** (an open source technology to delevop user apps & dashboards) to meet the standards of my previous deliverables in **Tableau** & **Power BI** 
 
